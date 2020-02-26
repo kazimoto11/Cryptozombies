@@ -118,6 +118,10 @@ App = {
      displayZombie: function (id, name, dna, level, readyTime, winCount, lossCount) {
           // Retrieve the zombie placeholder
           var zombieRow = $('#zombieRow');
+
+          //add the attribute ​style​ to the panel-heading​ and define ​background-color​ and ​color​ 
+          // (which is the font color) using the two functions you just defined.
+
       
           // define the price for leveling up
           // should not be hard-coded in the final version
@@ -207,9 +211,28 @@ App = {
                               console.error(error);
                     }
                     // reload the zombie list if event is triggered
+                    App.levelUp();
                     App.reloadZombies();
                });
           });
+     },
+
+     randomHex: function (dna) {
+          App.contracts.ZombieOwnership.deployed().then(function (instance){
+               // define randomhex function
+               // output hex color
+          })
+
+     },
+
+     invertHex: function () {
+          App.contracts.ZombieOwnership.deployed().then(function(instance){
+               // define invertHex function
+               //inputs hex colour from randomHex function
+               //outputs complementary hex color
+          })
+
+
      }
 };
 
